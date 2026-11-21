@@ -1,0 +1,8 @@
+# Normalize text files in the repo, but never touch the PoC reference
+# dictionaries: tests/ExtImeDicBuilder.Core.Tests/PocByteExactTests.cs
+# compares generated output against these files byte for byte, and they
+# intentionally encode newlines as numeric character references (&#13; /
+# &#10;). Any EOL conversion here would break those tests on a fresh clone.
+* text=auto
+*.dctx binary
+*.ico binary

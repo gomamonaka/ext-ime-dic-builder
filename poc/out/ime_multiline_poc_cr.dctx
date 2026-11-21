@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:Dictionary xmlns:ns1="http://www.microsoft.com/ime/dctx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns1:DictionaryHeader>
+    <ns1:DictionaryGUID>{6468566d-56e1-4383-aba2-d52eec31bd2a}</ns1:DictionaryGUID>
+    <ns1:DictionaryLanguage>ja-jp</ns1:DictionaryLanguage>
+    <ns1:DictionaryVersion>1</ns1:DictionaryVersion>
+    <ns1:CommentInsertion>true</ns1:CommentInsertion>
+    <ns1:DictionaryInfo Language="ja-jp">
+      <ns1:ShortName>複数行PoC_CR</ns1:ShortName>
+      <ns1:LongName>複数行PoC 切り分け用 (CR)</ns1:LongName>
+      <ns1:Description>CR区切りの複数行候補のみを含む切り分け用PoC辞書</ns1:Description>
+      <ns1:Copyright>Copyright (c) 2026 PoC</ns1:Copyright>
+    </ns1:DictionaryInfo>
+  </ns1:DictionaryHeader>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじしーあーる</ns1:InputString>
+    <ns1:OutputString>発言者：&#13;結論：&#13;補足：&#13;対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+</ns1:Dictionary>

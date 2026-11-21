@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExtImeDicBuilder.Core\ExtImeDicBuilder.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Version / product metadata (Phase 10 distributable build). -->
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Product>ExtIMEDicBuilder</Product>
+    <AssemblyTitle>ExtIMEDicBuilder</AssemblyTitle>
+    <Description>Microsoft IME に複数行の定型文を変換候補として登録するツール</Description>
+    <Copyright>Copyright (c) 2026 ExtIMEDicBuilder</Copyright>
+    <!-- Deliberately no Company: this is not published by any real
+         organization, and setting one would falsely imply it is. -->
+  </PropertyGroup>
+
+</Project>

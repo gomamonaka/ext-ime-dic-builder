@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:Dictionary xmlns:ns1="http://www.microsoft.com/ime/dctx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns1:DictionaryHeader>
+    <ns1:DictionaryGUID>{41e14f35-4291-4559-ac46-226df28b0b29}</ns1:DictionaryGUID>
+    <ns1:DictionaryLanguage>ja-jp</ns1:DictionaryLanguage>
+    <ns1:DictionaryVersion>1</ns1:DictionaryVersion>
+    <ns1:CommentInsertion>true</ns1:CommentInsertion>
+    <ns1:DictionaryInfo Language="ja-jp">
+      <ns1:ShortName>複数行PoC</ns1:ShortName>
+      <ns1:LongName>複数行変換候補 PoC 辞書 (UTF-8 BOM付き)</ns1:LongName>
+      <ns1:Description>本命ファイルと同一内容の UTF-8 BOM 付き版。BOM有無での読み込み可否比較用</ns1:Description>
+      <ns1:Copyright>Copyright (c) 2026 PoC</ns1:Copyright>
+    </ns1:DictionaryInfo>
+  </ns1:DictionaryHeader>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじしーあーる</ns1:InputString>
+    <ns1:OutputString>発言者：&#13;結論：&#13;補足：&#13;対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじえるえふ</ns1:InputString>
+    <ns1:OutputString>発言者：&#10;結論：&#10;補足：&#10;対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじしーあーるえるえふ</ns1:InputString>
+    <ns1:OutputString>発言者：&#13;&#10;結論：&#13;&#10;補足：&#13;&#10;対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじたんいつ</ns1:InputString>
+    <ns1:OutputString>発言者：結論：補足：対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじくうぎょう</ns1:InputString>
+    <ns1:OutputString>発言者：&#13;&#10;&#13;&#10;結論：&#13;&#10;補足：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじたぶ</ns1:InputString>
+    <ns1:OutputString>&#9;発言者：&#13;&#10;&#9;結論：&#13;&#10;&#9;補足：&#13;&#10;&#9;対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじまつび</ns1:InputString>
+    <ns1:OutputString>発言者：&#13;&#10;結論：&#13;&#10;補足：&#13;&#10;対応：&#13;&#10;</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじとくしゅ</ns1:InputString>
+    <ns1:OutputString>A&amp;B&#13;&#10;&lt;tag&gt;&#13;&#10;&quot;quote&quot;&#13;&#10;&apos;apos&apos;</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+</ns1:Dictionary>

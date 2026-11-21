@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:Dictionary xmlns:ns1="http://www.microsoft.com/ime/dctx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ns1:DictionaryHeader>
+    <ns1:DictionaryGUID>{ac5ab976-5c1c-46c0-97a6-d7b4eafd58c7}</ns1:DictionaryGUID>
+    <ns1:DictionaryLanguage>ja-jp</ns1:DictionaryLanguage>
+    <ns1:DictionaryVersion>1</ns1:DictionaryVersion>
+    <ns1:CommentInsertion>true</ns1:CommentInsertion>
+    <ns1:DictionaryInfo Language="ja-jp">
+      <ns1:ShortName>複数行PoC_ASCII読み</ns1:ShortName>
+      <ns1:LongName>複数行PoC ASCII読み受け入れテスト</ns1:LongName>
+      <ns1:Description>InputString に ASCII 文字を含む読みが受理されるかを検証するPoC辞書</ns1:Description>
+      <ns1:Copyright>Copyright (c) 2026 PoC</ns1:Copyright>
+    </ns1:DictionaryInfo>
+  </ns1:DictionaryHeader>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじcr</ns1:InputString>
+    <ns1:OutputString>発言者：&#13;結論：&#13;補足：&#13;対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじlf</ns1:InputString>
+    <ns1:OutputString>発言者：&#10;結論：&#10;補足：&#10;対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+  <ns1:DictionaryEntry>
+    <ns1:InputString>ぎじcrlf</ns1:InputString>
+    <ns1:OutputString>発言者：&#13;&#10;結論：&#13;&#10;補足：&#13;&#10;対応：</ns1:OutputString>
+    <ns1:PartOfSpeech>Noun</ns1:PartOfSpeech>
+    <ns1:Priority>100</ns1:Priority>
+    <ns1:ReverseConversion>false</ns1:ReverseConversion>
+    <ns1:CommonWord>false</ns1:CommonWord>
+  </ns1:DictionaryEntry>
+</ns1:Dictionary>

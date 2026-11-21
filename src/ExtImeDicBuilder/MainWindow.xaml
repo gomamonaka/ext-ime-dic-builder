@@ -1,0 +1,118 @@
+<Window x:Class="ExtImeDicBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExtImeDicBuilder"
+        mc:Ignorable="d"
+        Title="複数行IME辞書エディタ" Height="700" Width="1000" MinHeight="500" MinWidth="800">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10,4" />
+            <Setter Property="Margin" Value="0,0,8,0" />
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="420" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="140" />
+        </Grid.RowDefinitions>
+
+        <!-- Left: registration form -->
+        <GroupBox Header="定型文の登録" Grid.Column="0" Grid.Row="0">
+            <Grid Margin="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="0,0,0,8">
+                    <TextBlock Text="読み" FontWeight="Bold" Margin="0,0,0,4" />
+                    <TextBox Text="{Binding ReadingInput, UpdateSourceTrigger=PropertyChanged}" />
+                </StackPanel>
+
+                <TextBlock Grid.Row="1" Text="変換結果（複数行可）" FontWeight="Bold" Margin="0,0,0,4" />
+
+                <TextBox Grid.Row="2"
+                         Text="{Binding OutputInput, UpdateSourceTrigger=PropertyChanged}"
+                         AcceptsReturn="True"
+                         AcceptsTab="True"
+                         TextWrapping="Wrap"
+                         VerticalScrollBarVisibility="Auto"
+                         HorizontalScrollBarVisibility="Auto"
+                         FontFamily="Consolas"
+                         FontSize="14" />
+
+                <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,8,0,0">
+                    <Button Content="{Binding RegisterButtonLabel}" Command="{Binding RegisterOrUpdateCommand}" MinWidth="80" />
+                    <Button Content="クリア" Command="{Binding ClearFormCommand}" />
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <!-- Right: search + list -->
+        <Grid Grid.Column="2" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <DockPanel Grid.Row="0" Margin="0,0,0,6">
+                <TextBlock Text="検索:" VerticalAlignment="Center" Margin="0,0,6,0" DockPanel.Dock="Left" />
+                <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" />
+            </DockPanel>
+
+            <DataGrid Grid.Row="1"
+                      ItemsSource="{Binding Entries}"
+                      SelectedItem="{Binding SelectedEntry}"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      SelectionUnit="FullRow"
+                      GridLinesVisibility="Horizontal">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="読み" Binding="{Binding Reading}" Width="150" />
+                    <DataGridTextColumn Header="変換結果（プレビュー）" Binding="{Binding OutputPreview}" Width="*" />
+                    <DataGridTextColumn Header="更新日時" Binding="{Binding UpdatedAt, StringFormat=yyyy-MM-dd HH:mm}" Width="140" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,6,0,0">
+                <Button Content="削除" Command="{Binding DeleteCommand}" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Bottom: dictionary operations + log -->
+        <GroupBox Header="IME辞書への反映" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Margin="0,10,0,0">
+            <Grid Margin="6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Top">
+                    <Button Content="IME辞書を更新" Command="{Binding UpdateImeDictionaryCommand}" Margin="0,0,0,6" />
+                    <Button Content="DCTX を名前を付けて保存..." Command="{Binding SaveDctxAsCommand}" Margin="0,0,0,6" />
+                    <Button Content="IME辞書の登録を解除" Command="{Binding UnregisterImeDictionaryCommand}" />
+                </StackPanel>
+
+                <Grid Grid.Column="1" Margin="10,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="{Binding StatusMessage}" TextWrapping="Wrap" Margin="0,0,0,4" FontWeight="Bold" />
+                    <ListBox Grid.Row="1" ItemsSource="{Binding LogLines}" FontFamily="Consolas" FontSize="11" />
+                </Grid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
